@@ -26,6 +26,7 @@ def generate_load(connections, metrics, thread):
     log_queue(thread, "debug", "New iteration...")
     end_str = " " + str(random()) + " " + str(time.time()) + "\n"
     for i in range(connections):
+        time.sleep(0.003)
         out = ""
         base = options.prefix + ".test" + str(i) + ".metric"
         for j in range(metrics):
