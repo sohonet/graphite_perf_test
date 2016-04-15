@@ -36,7 +36,7 @@ def generate_load(connections, metrics, thread):
         out += "\n\n"
 #        out += bytearray("\n\n")
         try:
-            s = socket.socket(socket.AF_INET6, socket.SOCK_STREAM, 0)
+            s = socket.socket(socket.AF_INET, socket.SOCK_STREAM, 0)
             s.connect(addr)
             s.sendall(out)
             s.close()
